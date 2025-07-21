@@ -130,9 +130,7 @@ export const likePost = asyncHandler(async (req, res) => {
 		});
 	}
 
-	await post.save();
-
-	res.status(200).json({
+	res.status(201).json({
 		message: isLiked ? 'Post not liked anymore' : 'Post liked successfully',
 	});
 });

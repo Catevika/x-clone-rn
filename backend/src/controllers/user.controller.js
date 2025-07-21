@@ -1,4 +1,4 @@
-import {clerkClient} from '@clerk/express';
+import {clerkClient, getAuth} from '@clerk/express';
 import asyncHandler from 'express-async-handler';
 import User from '../models/user.model.js';
 

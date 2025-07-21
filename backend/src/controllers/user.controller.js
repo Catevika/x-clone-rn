@@ -44,7 +44,7 @@ export const syncUser = asyncHandler(async (req, res) => {
 
 	const user = await User.create(userData);
 
-	res.status(200).json({user, message: 'User created successfully'});
+	res.status(201).json({user, message: 'User created successfully'});
 });
 
 export const getCurrentUser = asyncHandler(async (req, res) => {
@@ -94,7 +94,7 @@ export const followUser = asyncHandler(async (req, res) => {
 		});
 	}
 
-	res.status(200).json({
+	res.status(201).json({
 		message: isFollowing
 			? 'User unfollowed successfully'
 			: 'User followed successfully',

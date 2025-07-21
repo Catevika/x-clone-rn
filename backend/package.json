@@ -24,6 +24,7 @@
 		"multer": "^2.0.1"
 	},
 	"devDependencies": {
-		"@types/cors": "^2.8.19"
+		"@types/cors": "^2.8.19",
+		"@types/multer": "^2.0.0"
 	}
 }

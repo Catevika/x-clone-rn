@@ -2,17 +2,31 @@
 	"version": 2,
 	"builds": [
 		{
-			"src": "src/server.js",
+			"src": "/src/server.js",
 			"use": "@vercel/node"
 		}
 	],
 	"routes": [
 		{
 			"src": "/(.*)",
-			"dest": "src/server.js"
+			"dest": "/src/server.js"
 		}
 	],
 	"env": {
-		"NODE_ENV": "production"
+		"NODE_ENV": "production",
+
+		"PORT": 5001,
+
+		"CLERK_PUBLISHABLE_KEY": "pk_test_c3RyaWtpbmctbWFja2VyZWwtOTQuY2xlcmsuYWNjb3VudHMuZGV2JA",
+		"CLERK_SECRET_KEY": "[REDACTED:stripe-secret-token]",
+
+		"MONGODB_URI": "mongodb+srv://dominiquebello:x7eF7DXRnfkVGSlJ@cluster0.egosg0u.mongodb.net/x_clonedb?retryWrites=true&w=majority&appName=Cluster0",
+
+		"ARCJET_KEY": "ajkey_01k0ehwc3fegm9s2f91z285kex",
+		"ARCJET_ENV": "development",
+
+		"CLOUDINARY_CLOUD_NAME": "dujziareq",
+		"CLOUDINARY_API_KEY": "[REDACTED:api-key]",
+		"CLOUDINARY_API_SECRET": "ONRoZhc2jSlJnSt5N6aepQ4Wh7o"
 	}
 }

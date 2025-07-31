@@ -9,7 +9,10 @@ export const useSocialAuth = () => {
 	const handleSocialAuth = async (strategy: 'oauth_google' | 'oauth_apple') => {
 		setIsLoading(true);
 		try {
-			const {createdSessionId, setActive} = await startSSOFlow({strategy});
+			const {createdSessionId, setActive} = await startSSOFlow({
+				strategy,
+				redirectUrl: 'exp://192.168.1.16:8081',
+			});
 			if (createdSessionId && setActive) {
 				await setActive({session: createdSessionId});
 			}

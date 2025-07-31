@@ -40,6 +40,8 @@ export const syncUser = asyncHandler(async (req, res) => {
 		lastName: clerkUser.lastName || '',
 		username: clerkUser.emailAddresses[0].emailAddress.split('@')[0],
 		profilePicture: clerkUser.profileImageUrl || '',
+		followers: [],
+		following: [],
 	};
 
 	const user = await User.create(userData);

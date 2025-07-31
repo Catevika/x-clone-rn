@@ -7,7 +7,7 @@ import {
 	View,
 } from 'react-native';
 
-export default function AuthPage() {
+export default function AuthScreen() {
 	const {isLoading, handleSocialAuth} = useSocialAuth();
 
 	return (

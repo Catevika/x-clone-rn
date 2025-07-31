@@ -1,3 +1,4 @@
+import {TRENDING_TOPICS} from '@/data/trendingTopics';
 import {Feather} from '@expo/vector-icons';
 import {
 	ScrollView,
@@ -9,14 +10,6 @@ import {
 import {SafeAreaView} from 'react-native-safe-area-context';
 
 const SearchScreen = () => {
-	const TRENDING_TOPICS = [
-		{topic: '#ReactNative', tweets: '125K'},
-		{topic: '#Typescript', tweets: '89K'},
-		{topic: '#WebDevelopment', tweets: '234K'},
-		{topic: '#AI', tweets: '567K'},
-		{topic: '#TechNews', tweets: '98K'},
-	];
-
 	return (
 		<SafeAreaView className='flex-1 bg-white'>
 			<View className='px-4 py-3 border-b border-gray-100'>
